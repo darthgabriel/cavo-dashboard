@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cavo — Dashboard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="ambient"></div>
+    <div id="app">
+      <aside id="sidebar">
+        <div class="logo">
+          <span class="logo-mark">⚡</span>
+          <span class="logo-text">CAVO</span>
+          <span class="logo-sub">agent</span>
+        </div>
+        <nav>
+          <button class="nav-btn active" data-view="consolidado">
+            <span class="nav-icon">◈</span>
+            Consolidado
+          </button>
+          <div class="nav-divider"></div>
+          <div id="nav-accounts"></div>
+        </nav>
+        <div class="sidebar-footer">
+          <span class="update-label">Última actualización</span>
+          <span class="update-time" id="update-time">—</span>
+        </div>
+      </aside>
+      <main id="main">
+        <header>
+          <div class="header-left">
+            <h1 id="view-title">Consolidado</h1>
+            <span class="header-meta">5 cuentas · datos dinámicos</span>
+          </div>
+            <div class="header-right">
+            <span class="live-indicator"></span>
+            <span class="live-text">Live</span>
+          </div>
+        </header>
+        <div id="content"></div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
